@@ -90,13 +90,13 @@ GROUP BY o.book_id, b.title
 ORDER BY ORDER_COUNT DESC 
 LIMIT 1;
 
--- 5) Show the top 3 most expensive books of 'Fantasy' Genre :
+-- Show the top 3 most expensive books of 'Fantasy' Genre :
 
 SELECT * FROM books
 WHERE genre ='Fantasy'
 ORDER BY price DESC LIMIT 3;
 
--- 6) Retrieve the total quantity of books sold by each author:
+-- Retrieve the total quantity of books sold by each author:
 
 SELECT b.author, SUM(o.quantity) AS Total_Books_Sold
 FROM orders o
